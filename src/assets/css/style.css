@@ -1,3 +1,22 @@
-body{
-    background: #F2F2F2;
+body {
+    background: #E1E4FF;
+}
+
+.hou_ddrt {
+    width: 21px;
+    height: 18px;
+    background-position: -249px -41px;
+}
+
+.hou_ddrt.ab {
+    background-position: -296px -48px;
+}
+
+.van-nav-bar {
+    background: #6E7DFF;
+
+}
+
+.van-nav-bar__title {
+    color: #fff;
 }

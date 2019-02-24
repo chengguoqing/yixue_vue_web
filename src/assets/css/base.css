@@ -249,9 +249,14 @@ html {
     padding-right: 10px
 }
 
+.pder {
+    padding-left: 20px;
+    padding-right: 20px
+}
+
 .f_i {
     display: inline-block;
-
+    background: url(../img/xbt.png);
     background-size: 360px;
     vertical-align: middle !important
 }
@@ -1042,7 +1047,7 @@ em {
 }
 
 .ls {
-    color: #474d73 !important;
+    color: #2dc2eb !important;
 }
 
 .lser {
