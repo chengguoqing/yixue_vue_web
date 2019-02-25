@@ -10,10 +10,16 @@
 	   
 
         
-        <section class="yj4 bgff  pt20 pm50 pr ">
+        <section class="yj4 bgff  pt20 pm50 pr sdf_deeert">
             <span class="sd_jh_ddff fz14 cz">
                 1/50
             </span>
+            
+            <section class="sd_jh_deerrt">
+                <i class="f_i time_icons"></i>
+                <span>01：59：23</span>
+            </section>
+            
             <section class="pd">
             <p class="fz13 z6 pm15">
                 <span class="danh_rtt">单选</span>
@@ -22,58 +28,17 @@
             
             <section v-for="(sd,idx) in timu_d" class="fz13 z6 sdf_ddrt">
                 <span class="ls df_xddrx f_b">
-                   <span v-if="idx!=0&&idx!=3"> {{sd.xz}}</span>
-                    <i class="f_i gous_ddr" v-if="idx==0"></i>
-                    <i class="f_i gous_ddr ab" v-if="idx==3"></i>
+                   <span > {{sd.xz}}</span>
+                   
                 </span>
                 <span class="">{{sd.timu}}</span>
             </section>
             </section>
             
-            <van-row class="cen mt40">
-                <van-col span="12">
-                    <section class="df_dff_rert">
-                        正确答案 
-                    </section>
-                </van-col>
-                <van-col span="12">
-                     <section class="df_dff_rert ab">
-                        答错率  
-                    </section>
-                </van-col>
-            </van-row>
-            
-                  <van-row class="cen ">
-                <van-col span="12">
-                    <section class="dsd_jh_dr">
-                        A 
-                    </section>
-                </van-col>
-                <van-col span="12">
-                    <section class="dsd_jh_dr ab">
-                        60.8%
-                    </section>
-                </van-col>
-            </van-row>
-            
-            <section class="pd mt20">
-                <i class="f_i jiexi_dt"></i>
-                <span class="fz14 ls ml10">  解析</span>
-            </section>
-            
-            <section class="pd pt10">
-            <section v-for="sd in jiexi" class="z6 fz13 df_hj_dert">
-                <span class="sd_jh_ddfg fl">{{sd.xz}}</span>
-                <section class="ov">
-                    {{sd.neirong}}
-                </section>
-                <p class="qc"></p>
-            </section>
-                
-                
-                
-                </section>
-            
+         
+               
+     
+         
             
             
             
@@ -83,9 +48,9 @@
     
            <van-row>
                <van-col span="15">
-                     <span @click="sd_sdff?sd_sdff='':sd_sdff='act'">
-                <i class="f_i shoyh_icon " :class="sd_sdff"></i>
-                <span class="fz15 z6 ml5">收藏</span>
+                     <span >
+                <i class="f_i dsfsd_deert " ></i>
+                <span class="fz15 z6 ml5">交卷</span>
             </span>
             
             
@@ -117,7 +82,7 @@
 
            <van-popup v-model="show_er" position="bottom" >
                    
-        <datika @close_btn="show_er=false"></datika>
+        <datika type="1" @close_btn="show_er=false"> </datika>
         
         
                 </van-popup>
@@ -176,6 +141,32 @@
 
 </script>
 <style scoped>
+    .sd_jh_deerrt{
+        position: absolute;
+        right: -5px;
+        top: -20px;
+        font-size: 12px;
+        color: #808080;
+        background: #fff;
+        border-radius: 20px;
+        height: 28px;
+        line-height: 28px;
+            box-shadow: 0 0px 4px rgba(0,0,0,.2);
+        padding-right: 10px;
+        transform: scale(0.9)
+    }
+    .time_icons{
+        width: 27px;
+        height: 28px;
+        background-position: -118px -91px;
+        margin-right: 4px;
+        position: relative;
+        top: -1px;
+    }
+    
+    .sdf_deeert{
+        min-height: 400px
+    }
     .sd_jh_ddff {
         background: #2FC2EB;
         color: #fff;
@@ -291,6 +282,12 @@
 
     .dsf_derrt {
         padding-top: 30px;
+    }
+    
+    .dsfsd_deert{
+        width: 29px;
+        height: 29px;
+        background-position: -162px -91px
     }
 
 </style>

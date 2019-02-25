@@ -5,10 +5,15 @@
 	
        <p class="fz15 sd_deerrtx pder">
            答题卡
+           <i class="f_i close_iconse" @click="$emit('close_btn')"></i>
         </p>
         
         <section class="box pder dsf_jh_deet">
-                <section class="box_b">
+                <section class="box_b" v-if="type==1">
+                    <i class="f_i shg_dert ab"></i>
+                    <span class="fz14 ml5">交卷</span>
+                </section>
+                <section class="box_b" v-if="type!=1">
                     <i class="f_i shg_dert"></i>
                     <span class="fz14 ml5">已收藏</span>
                 </section>
@@ -48,6 +53,9 @@
 </template>
 <script>
     export default {
+        props: {
+            type: ""
+        },
         data() {
             return {
 
@@ -86,6 +94,9 @@
         height: 29px;
         background-position: -14px -90px;
     }
+    .shg_dert.ab{
+              background-position: -162px -91px
+    }
 
     .dsf_jh_deet {
         line-height: 40px;
@@ -122,4 +133,12 @@
         padding-top: 8px;
     }
 
+    .close_iconse{
+        width: 25px;
+        height: 26px;
+        background-position: -260px -94px;
+        position: absolute;
+        right: 10px;
+        top: 7px;
+    }
 </style>
