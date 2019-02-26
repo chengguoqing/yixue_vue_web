@@ -48,7 +48,7 @@
     
            <van-row>
                <van-col span="15">
-                     <span >
+                     <span @click="show=true">
                 <i class="f_i dsfsd_deert " ></i>
                 <span class="fz15 z6 ml5">交卷</span>
             </span>
@@ -87,6 +87,51 @@
         
                 </van-popup>
         
+        
+        
+        
+        <van-dialog
+  v-model="show"
+show-cancel-button
+cancel-button-text="现在交卷"
+confirm-button-text='继续作答'
+@cancel="show_san=true"
+>
+ 
+    <p class="cen fz16 z3 pt15">
+        确定交卷退出竞赛吗？
+    </p>        
+    <section class="mt20 cen fz14 fsd_dderrt">
+    您还剩   <span class="ls">48</span>   题未做 <br>
+        打错     <span class="ye">3</span>    题<br>
+        竞赛得分      <span class="ls">0</span>   分
+    </section>        
+            
+</van-dialog>
+        
+        
+        
+        
+                <van-dialog
+  v-model="show_san"
+confirm-button-text='继续挑战'
+>
+ 
+    <p class="cen fz16 z3 pt15">
+        成绩不合格
+    </p>        
+    <section class="mt20 cen fz14 fsd_dderrt">
+        您还剩  <span class="ls">48</span>      题未做<br>
+        打错     <span class="ye">3</span>    题<br>
+       竞赛得分 <span class="ls">&lt;9</span>       分,不合格
+    </section>        
+            
+</van-dialog>
+        
+        
+        
+        
+        
      
 	</div>
        </section>
@@ -96,7 +141,9 @@
     export default {
         data() {
             return {
+                show:false,
                 show_er: false,
+                show_san:false,
                 sd_sdff:"act",
                 timu_d: [{
                     xz: "A",
@@ -289,5 +336,8 @@
         height: 29px;
         background-position: -162px -91px
     }
-
+    .fsd_dderrt{
+        line-height: 1.5;
+        padding-bottom: 20px;
+    }
 </style>
