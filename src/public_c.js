@@ -4,7 +4,11 @@ var wx = require('weixin-js-sdk');
 import axios from "axios"
 export default {
     install(Vue) {
-  
+
+        Vue.prototype.Title = function (title, ty) {
+
+            document.title = title
+        }
         Vue.prototype.post = function (url, dtat, call) {
             axios({
                 method: 'post',

@@ -32,7 +32,7 @@
                 </section>
                     
                     <p class="mt40 fg_jjh_deert">
-                        <van-button type="primary" @tap="sd_deert">立即参赛</van-button>
+                        <van-button type="primary" @click="hf('jsz')">立即参赛</van-button>
                     </p>
                     
                     

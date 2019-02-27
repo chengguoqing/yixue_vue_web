@@ -169,8 +169,12 @@
                
             }
         },
+        onNavigationBarButtonTap(e) {
+            console.log(22);
+			alert(2)
+		},
         mounted() {
-
+            this.Title(this.$route.query.title)
         },
     }
 

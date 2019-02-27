@@ -95,7 +95,7 @@
 show-cancel-button
 cancel-button-text="现在交卷"
 confirm-button-text='继续作答'
-@cancel="show_san=true"
+@cancel="hf('competition_results')"
 >
  
     <p class="cen fz16 z3 pt15">

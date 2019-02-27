@@ -20,7 +20,7 @@
 
         },
         mounted() {
-
+            this.$route.meta.title="dsfdsf"
         },
     }
 
